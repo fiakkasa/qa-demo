@@ -1,0 +1,26 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "qa-demo Launch",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-qa-demo",
+      "program": "${workspaceFolder}/qa-demo/bin/Debug/net8.0/qa-demo",
+      "args": [],
+      "cwd": "${workspaceFolder}/qa-demo",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    }
+  ]
+}
